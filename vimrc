@@ -134,7 +134,6 @@ nmap ,nt :NERDTreeToggle
 let NERDTreeShowHidden=1
 
 "autopen NERDTree and focus cursor in new document
-"autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
-
 

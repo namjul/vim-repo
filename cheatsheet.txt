@@ -1,0 +1,113 @@
+'------------------------
+' Navigation
+'------------------------
+ma						mark position with the letter 'a'
+`a						go to the position marked with an 'a'
+`.						go to the last position (or ctrl + o)
+gg						go to the top of the file
+G						go to the end of the file
+ctrl + u				go up a 1/2 page
+ctrl + d				go down a 1/2 page
+ctrl + f				go up a full page
+ctrl +				go down a full page
+25gg 25G					goes to line 25
+gf						go to the file referenced under the cursor
+
+'------------------------
+' Visual modes
+'------------------------
+v						enter visual mode
+V						enter visual-line mode
+ctrl + v				enter visual-block mode
+ctrl + v$			enter visual-block mode that appends to the end of the lines
+NOTE: o switches the cursor to the other corner to continue selection from there
+
+'------------------------
+' Searching
+'------------------------
+? pattern			searches for the pattern in the backward direction
+#						searches for the word your cursor in currently over
+n						jumps to next search result
+N						jumps to previous search result
+.						referrs to the current line
+%						referrs to the entire file 
+
+'------------------------
+' Buffers
+'------------------------
+:ball					open all buffers in split windows
+:bufdo bd			delete all buffers
+
+'------------------------
+' Editing
+'------------------------
+cc						change the entire line that your cursor in over
+ci'					changes the inner everything of the "'" marks
+cit					changes the inner tag content
+ci"
+ci(
+ci{
+ci[
+NOTE: on the ones above, change the i to an a and it will also select the containing character (ie remove the quote marks in addition to whats inside)
+C						changed everything from the cursor to the end of the line
+D						delete everything from the cursor to the end of the line
+A						append to the end of the line
+I						prepend to the beginning of the line
+:%d						delete the contents of a file
+:r	path				read in the contents of the path
+:13,18d				delete everything from lines 13 to 18
+s						deletes the character and enters insert mode. same as "xi"
+>						When in a visual mode, this will indent right the selected area
+<						When in a visual mode, this will indent left the selected area
+df;					delete text from the cursor to the first ; to the right
+cT$					change text from the cursor to the first $ to the left
+CTRL-A CTRL-X		increment/decrement the numbers under the cursor
+
+
+'------------------------
+' Folding
+'------------------------
+zo						open folded section
+zc						close closest fold
+zR						open all folds
+zM						close all folds
+zj						move to the start of the next fold
+zk						move to the end of the previous fold
+
+
+
+'------------------------
+' Other
+'------------------------
+ctrl + p				autocomplete the variable/word by looking backwards in the file
+,v						same as above, but mapped in vimrc
+
+
+
+'------------------------
+' Plugins
+'------------------------
+
+' NERDTree
+p						jump to parent directory
+P						jump to root directory
+m						opens menu
+ma						create a new object (file or directory) directory ends with a "/"
+s						open file in vertically split window
+i						open file in horizontally split window
+o						open file in buffer
+t						open file in new tab
+cd						change current directory to cursor
+:n *					open all files of current directory in buffers
+
+' Snipmate
+pattern + <tab>	expands the snippet with the tab key
+<tab>					once in an expanded snippet, tab jumps to the next tab stop
+' Fuzzy Finder
+
+Once you have found your file,
+        CR  (|g:fuf_keyOpen|)        - opens in a previous window. 
+        C-j (|g:fuf_keyOpenSplit|)   - opens in a split window. 
+        C-k (|g:fuf_keyOpenVsplit|)  - opens in a vertical-split window. 
+        C-l (|g:fuf_keyOpenTabpage|) - opens in a new tab page.
+
